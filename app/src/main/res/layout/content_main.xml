@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -11,193 +12,225 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="rabi.com.sqlitelearning.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="#521126"
-    android:clickable="false">
+    android:clickable="false"
+    android:background="#ebebeb">
 
     <RelativeLayout
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#8e2443">
+        android:id="@+id/scc"
+        android:weightSum="1"
+        tools:ignore="UselessParent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/s1">
+        <RelativeLayout
 
-
-        <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/lini1">
+            android:id="@+id/r4"
+            android:background="#ffffff">
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="CGPA"
-                android:id="@+id/c_text"
-                android:layout_weight="1"
-                android:textColor="#3c2e2e"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textSize="40dp"
-                android:textStyle="normal|bold"
-                android:background="#b8bd22" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0.00"
-                android:id="@+id/CgPa"
-                android:layout_weight="1"
-                android:textColor="#ff000d"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textSize="40dp"
-                android:textStyle="normal|bold"
-                android:background="#dbd822" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/lini1"
-            android:id="@+id/r2"
-            android:layout_centerHorizontal="true">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Total Credit"
-                android:id="@+id/totalCre"
-                android:textColor="#fff"
-                android:layout_weight="0.71"
-                android:layout_marginLeft="0dp"
-                android:layout_marginStart="0dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:background="#679a02"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:gravity="center" />
+                android:id="@+id/lini1">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/CGPA"
+                    android:id="@+id/c_text"
+                    android:layout_weight="1"
+                    android:textColor="#3c2e2e"
+                    android:gravity="center"
+                    android:textSize="40sp"
+                    android:textStyle="normal|bold"
+                    android:paddingTop="50dp"
+                    android:paddingBottom="50dp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:id="@+id/mCgPa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="50dp"
+                    android:paddingTop="50dp"
+                    android:text="@string/_0_00"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ff000d"
+                    android:textSize="40sp"
+                    android:textStyle="normal|bold"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/_130"
-                android:id="@+id/etcredit"
-                android:textColor="#fff"
-                android:layout_alignBottom="@+id/totalCre"
-                android:layout_toRightOf="@+id/totalCre"
-                android:layout_toEndOf="@+id/totalCre"
-                android:layout_alignParentLeft="false"
-                android:paddingLeft="5dp"
-                android:background="#9acc02"
-                android:paddingRight="3dp"
-                android:gravity="center"
-                android:layout_weight="1" />
+                android:layout_below="@+id/lini1"
+                android:id="@+id/r2"
+                android:layout_centerHorizontal="true">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/total_credit"
+                    android:id="@+id/totalCre"
+                    android:layout_weight="0.71"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginStart="0dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/r2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/linearLayout"
-            android:background="#c7023a">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/_130"
+                    android:id="@+id/metcredit"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="3dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    tools:ignore="RtlHardcoded" />
 
-            <EditText
-                android:layout_width="wrap_content"
+            </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/r2"
+                    android:id="@+id/r3">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:id="@+id/liL"
+                        android:background="#c7023a">
+
+                        <EditText
+                            android:id="@+id/crs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:width="120dp"
+                            android:gravity="center"
+                            android:hint="@string/Course"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:textColor="#fff"
+                            android:textColorHint="#fff"
+                            tools:singleLine="true"/>
+
+                        <EditText
+                            android:id="@+id/crdt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:width="120dp"
+                            android:gravity="center"
+                            android:hint="@string/credit"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:textColor="#fff"
+                            android:textColorHint="#fff"
+                            tools:singleLine="true"/>
+
+                        <EditText
+                            android:id="@+id/gpa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:width="120dp"
+                            android:gravity="center"
+                            android:hint="@string/grade"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:textColor="#fff"
+                            android:textColorHint="#fff"
+                            tools:singleLine="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/liL"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/lil2"
+                        android:background="#fd9165">
+
+                        <Button
+                            android:id="@+id/update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:background="#ea4c37"
+                            android:focusable="true"
+                            android:onClick="onclickUPDATE"
+                            android:text="@string/update"
+                            android:textColor="#fff"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/delete"
+                            android:layout_weight="3"
+                            android:text="@string/delete"
+                            android:onClick="onclickDELETE"
+                            android:background="#ea4c37"
+                            android:textColor="#fff"/>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/insert"
+                            android:id="@+id/add"
+                            android:layout_weight="3"
+                            android:onClick="onclickADD"
+                            android:background="#ea4c37"
+                            android:textColor="#fff"/>
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+            <ListView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/Course"
-                android:id="@+id/crs"
-                android:width="120dp"
-                android:gravity="center"
-                android:layout_weight="3"
-                android:textColor="#fff"
-                android:textColorHint="#fff" />
+                android:id="@+id/listView"
+                android:layout_below="@+id/r3"
+                tools:ignore="NestedScrolling"></ListView>
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="@string/credit"
-                android:id="@+id/crdt"
-                android:width="120dp"
-                android:gravity="center"
-                android:layout_weight="3"
-                android:textColor="#fff"
-                android:textColorHint="#fff" />
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="@string/grade"
-                android:id="@+id/gpa"
-                android:width="120dp"
-                android:gravity="center"
-                android:layout_weight="3"
-                android:textColor="#fff"
-                android:textColorHint="#fff" />
 
-        </LinearLayout>
+        </RelativeLayout>
+        </ScrollView>
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/linearLayout2"
-            android:background="#fd9165">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UPDATE"
-                android:id="@+id/update"
-                android:layout_weight="3"
-                android:onClick="onclickUPDATE"
-                android:background="#ea4c37"
-                android:textColor="#fff" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/delete"
-                android:layout_weight="3"
-                android:text="DELETE"
-                android:onClick="onclickDELETE"
-                android:background="#ea4c37"
-                android:textColor="#fff" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="INSERT"
-                android:id="@+id/add"
-                android:layout_weight="3"
-                android:onClick="onclickADD"
-                android:background="#ea4c37"
-                android:textColor="#fff" />
-        </LinearLayout>
-
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/listView"
-            android:layout_below="@+id/linearLayout2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="#ffc302" />
     </RelativeLayout>
+
+
+
 
 
 </RelativeLayout>

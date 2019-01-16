@@ -7,10 +7,10 @@ public class Course {
 
     private int _id;
     private String _courseName;
-    private int _credit;
+    private float _credit;
     private float _gpa;
 
-    public Course( String _courseName, int _credit, float _gpa) {
+    public Course( String _courseName, float _credit, float _gpa) {
 
         this._courseName = _courseName;
         this._credit = _credit;
@@ -33,11 +33,11 @@ public class Course {
         this._courseName = _courseName;
     }
 
-    public int get_credit() {
+    public float get_credit() {
         return _credit;
     }
 
-    public void set_credit(int _credit) {
+    public void set_credit(float _credit) {
         this._credit = _credit;
     }
 

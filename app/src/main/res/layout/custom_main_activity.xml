@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_collapseParallaxMultiplier="1.0"
+    android:background="@color/common_google_signin_btn_text_dark_default">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+        tools:ignore="ScrollViewSize,UselessParent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30dp">
+
+                <TextView
+                    android:text="CGPA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/c_text"
+                    android:textSize="18sp"
+                    android:layout_alignTop="@+id/mCgPa"
+                    android:layout_alignLeft="@+id/mCgPa"
+                    android:layout_alignStart="@+id/mCgPa"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/common_google_signin_btn_text_light_default"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:text="130"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/mCgPa"
+                    android:layout_alignRight="@+id/mCgPa"
+                    android:layout_alignEnd="@+id/mCgPa"
+                    android:id="@+id/metcredit"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/common_google_signin_btn_text_light_default"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:text="@string/credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/metcredit"
+                    android:layout_toLeftOf="@+id/metcredit"
+                    android:layout_toStartOf="@+id/metcredit"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:id="@+id/totalCre"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/common_google_signin_btn_text_light_default"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:text="0.00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mCgPa"
+                    android:textAlignment="center"
+                    android:textSize="150sp"
+                    android:fontFamily="sans-serif"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/common_google_signin_btn_text_light_default"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/liL"
+                    android:background="#f44336">
+
+                    <EditText
+                        android:id="@+id/crs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:width="120dp"
+                        android:gravity="center"
+                        android:hint="@string/Course"
+                        android:inputType="textCapCharacters|textNoSuggestions"
+                        android:maxLength="9"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"/>
+
+                    <EditText
+                        android:id="@+id/crdt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:width="120dp"
+                        android:gravity="center"
+                        android:hint="@string/credit"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"
+                        android:maxLines="1"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"/>
+
+                    <EditText
+                        android:id="@+id/gpa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:width="120dp"
+                        android:gravity="center"
+                        android:hint="@string/grade"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/liL"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/lil2"
+                    android:background="#ffc107">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPDATE"
+                        android:id="@+id/update"
+                        android:layout_weight="3"
+                        android:onClick="onclickUPDATE"
+                        android:textColor="#fff"
+                        tools:ignore="ButtonStyle,HardcodedText"
+                        android:background="#ffc107" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/delete"
+                        android:layout_weight="3"
+                        android:text="DELETE"
+                        android:onClick="onclickDELETE"
+                        android:textColor="#fff"
+                        tools:ignore="ButtonStyle,HardcodedText"
+                        android:background="#ffa000" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INSERT"
+                        android:id="@+id/add"
+                        android:layout_weight="3"
+                        android:onClick="onclickADD"
+                        android:textColor="#fff"
+                        tools:ignore="ButtonStyle,HardcodedText"
+                        android:background="#ffc107" />
+                </LinearLayout>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lil2"
+                    android:id="@+id/listview"
+                    tools:ignore="NestedScrolling"/>
+
+            </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

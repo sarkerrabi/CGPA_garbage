@@ -1,8 +1,36 @@
 <resources>
     <string name="app_name">CGPA garbage</string>
-    <string name="action_settings">Settings</string>
+    <string name="reset">RESET</string>
     <string name="Course">Course</string>
     <string name="credit">Credit</string>
     <string name="_130">130</string>
     <string name="grade">Grade</string>
+    <string name="cgpa">CGPA</string>
+    <string name="circle">circle</string>
+    <string name="admob_id">ca-app-pub-6801246529899946~1035835119</string>
+    <string name="garbage">garbage</string>
+    <string name="title_activity_start_main">StartMainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Change Password</string>
+    <string name="_0_00">0.00</string>
+    <string name="delete">DELETE</string>
+    <string name="CGPA">CGPA</string>
+    <string name="insert">INSERT</string>
+    <string name="total_credit">Total Credit</string>
+    <string name="update">UPDATE</string>
+    <string name="stats">STATS</string>
+    <string name="submit">submit</string>
+    <string name="default_password_5555">Default password 5555</string>
+    <string name="enter_password">Enter password</string>
+    <string name="icon">icon</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="confirm_password">Confirm Password*</string>
+    <string name="new_password">New Password*</string>
+    <string name="change_password">change password</string>
+    <string name="insert_your_target_cgpa">Insert Your Target CGPA</string>
+    <string name="decision_true_message">You can not achieve your target CGPA within one semester.</string>
+    <string name="decision_false_message">Just retake this courses and achieve your target CGPA</string>
 </resources>
