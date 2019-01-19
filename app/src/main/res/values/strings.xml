@@ -33,4 +33,5 @@
     <string name="insert_your_target_cgpa">Insert Your Target CGPA</string>
     <string name="decision_true_message">You can not achieve your target CGPA within one semester.</string>
     <string name="decision_false_message">Just retake this courses and achieve your target CGPA</string>
+    <string name="target_grade">Target Grade</string>
 </resources>

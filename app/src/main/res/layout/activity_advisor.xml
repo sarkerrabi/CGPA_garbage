@@ -11,8 +11,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         tools:ignore="UselessParent">
-
 
 
         <LinearLayout
@@ -20,6 +20,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:ignore="ScrollViewSize,UselessParent">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,16 +40,16 @@
                     tools:ignore="HardcodedText" />
 
                 <TextView
-                    android:text="130"
+                    android:id="@+id/metcredit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/mCgPa"
-                    android:layout_alignRight="@+id/mCgPa"
                     android:layout_alignEnd="@+id/mCgPa"
-                    android:id="@+id/metcredit"
+                    android:layout_alignRight="@+id/mCgPa"
+                    android:layout_alignBottom="@+id/mCgPa"
                     android:fontFamily="sans-serif"
-                    android:textColor="@color/common_google_signin_btn_text_light_default"
+                    android:text="130"
                     android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_light_default"
                     android:textSize="18sp"
                     tools:ignore="HardcodedText" />
 
@@ -68,16 +69,16 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:text="0.00"
+                    android:id="@+id/mCgPa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/mCgPa"
-                    android:textAlignment="center"
-                    android:textSize="150sp"
-                    android:fontFamily="sans-serif"
-                    android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif"
+                    android:text="0.00"
+                    android:textAlignment="center"
                     android:textColor="@color/common_google_signin_btn_text_light_default"
+                    android:textSize="150sp"
                     tools:ignore="HardcodedText" />
 
             </RelativeLayout>
@@ -88,11 +89,11 @@
 
 
                 <LinearLayout
+                    android:id="@+id/liL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:id="@+id/liL"
+                    android:layout_alignParentLeft="true"
                     android:background="#f44336">
 
                     <EditText
@@ -101,6 +102,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:width="120dp"
+                        android:autofillHints=""
                         android:gravity="center"
                         android:hint="@string/insert_your_target_cgpa"
                         android:inputType="numberDecimal"
@@ -108,17 +110,18 @@
                         android:maxLines="1"
                         android:textColor="#fff"
                         android:textColorHint="#fff"
-                        android:autofillHints="" tools:targetApi="o" />
+                        tools:targetApi="o" />
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:id="@+id/lil2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/liL"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/lil2"
-                    android:background="#ffc107">
+                    android:background="#ffc107"
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/retake_only"
@@ -126,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:background="#ffc107"
-                        android:onClick="onRETAKEonly"
+                        android:onClick="onClick"
                         android:text="Retake Only"
                         android:textColor="#fff"
                         tools:ignore="ButtonStyle,HardcodedText" />
@@ -137,7 +140,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:background="#ffa000"
-                        android:onClick="onNEWandRETAKE"
+                        android:onClick="onClick"
                         android:text="Retake And New"
                         android:textColor="#fff"
                         tools:ignore="ButtonStyle,HardcodedText" />
@@ -148,16 +151,17 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:background="#ffc107"
-                        android:onClick="onNEWonly"
+                        android:onClick="onClick"
                         android:text="New Only"
                         android:textColor="#fff"
                         tools:ignore="ButtonStyle,HardcodedText" />
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_below="@id/lil2"
                     android:id="@+id/lil3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lil2"
                     android:orientation="horizontal">
 
                     <TextView
@@ -184,25 +188,33 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:gravity="center"
-                        android:text="Target Grade"
+                        android:text="@string/target_grade"
                         android:textSize="18sp" />
                 </LinearLayout>
 
-                <ListView
-                    android:id="@+id/listviewForList"
+                <LinearLayout
+                    android:id="@+id/linl4"
+                    android:layout_below="@+id/lil3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@+id/lil3"
-                    tools:ignore="NestedScrolling" />
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/listviewForList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="NestedScrolling" />
+
+                    <TextView
+                        android:id="@+id/message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/app_name" />
+
+                </LinearLayout>
 
             </RelativeLayout>
-
-            <TextView
-                android:id="@+id/message"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/app_name" />
 
         </LinearLayout>
     </ScrollView>

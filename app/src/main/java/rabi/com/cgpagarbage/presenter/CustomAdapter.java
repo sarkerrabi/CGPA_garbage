@@ -36,9 +36,7 @@ public class CustomAdapter extends ArrayAdapter<ListItem> {
         TextView creText = (TextView)customView.findViewById(R.id.item_credit);
         TextView gradText = (TextView)customView.findViewById(R.id.item_grade);
 
-        crsText.setTypeface(typeface);
-        creText.setTypeface(typeface);
-        gradText.setTypeface(typeface);
+
 
         crsText.setText(li.getCourse());
         creText.setText(li.getCredit());
@@ -48,7 +46,9 @@ public class CustomAdapter extends ArrayAdapter<ListItem> {
             gradText.setBackgroundColor(Color.RED);
 
         }
-
+        crsText.setTypeface(typeface);
+        creText.setTypeface(typeface);
+        gradText.setTypeface(typeface);
 
 
 
